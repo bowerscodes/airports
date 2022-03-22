@@ -1,0 +1,22 @@
+{
+  "name": "airports",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bowerscodes/airports.git"
+  },
+  "author": "James Bowers",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bowerscodes/airports/issues"
+  },
+  "homepage": "https://github.com/bowerscodes/airports#readme",
+  "devDependencies": {
+    "jest": "^27.5.1"
+  }
+}
