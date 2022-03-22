@@ -9,8 +9,8 @@ class Aeroplane {
         this.airport = null;
     };
 
-    land() {
-
+    land(airport) {
+        this.airport = airport;
     };
 }
 
