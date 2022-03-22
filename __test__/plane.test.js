@@ -9,9 +9,12 @@ describe('Aeroplane', () => {
 
         expect(aeroplane.airport).toEqual('Sitges');
     });
-    // it('can set sail', () => {
-    //     const ship = new Ship('Sitges');
-        
-    // })
+    it('can take off', () => {
+        const aeroplane = new Aeroplane('Sitges');
+
+        aeroplane.takeOff();
+
+        expect(aeroplane.airport).toBeFalsy();        
+    })
 
 });
