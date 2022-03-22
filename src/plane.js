@@ -1,16 +1,22 @@
 class Aeroplane {
-    constructor(startingAirport) {
-        this.airport = startingAirport;
+    constructor(flightplan) {
+        this.flightplan = flightplan
+        this.currentAirport = flightplan.airports[0];
         this.previousAirport = null;
 
     };
 
     takeOff() {
-        this.airport = null;
+        this.previousAirport = this.currentAirport;
+        this.currentAirport = null;
+        
     };
 
-    land(airport) {
-        this.airport = airport;
+    land() {
+        const flightplan = this.flightplan;
+        const previousAirportIndex = flightplan.airports.indexOf(this.previousAirport);
+        
+        this.currentAirport = flightplan.airports[previousAirportIndex + 1];
     };
 }
 
