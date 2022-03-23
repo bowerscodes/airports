@@ -9,6 +9,7 @@ class Aeroplane {
     takeOff() {
         this.previousAirport = this.currentAirport;
         this.currentAirport = null;
+        this.previousAirport.removePlane(this);
         
     };
 

@@ -1,6 +1,4 @@
 const Airport = require('../src/airport.js');
-const Aeroplane = require('../src/plane.js');
-const Flightplan = require('../src/flightplan.js');
 
 describe('airport', () => {
     describe('with airports and airplanes', () => {
@@ -11,8 +9,8 @@ describe('airport', () => {
             flightplan = {
                 airports: [airport]
             };
-            ba149 = new Aeroplane(flightplan);
-            ba127 = new Aeroplane(flightplan);
+            ba149 = jest.fn();
+            ba127 = jest.fn();
     });
 
     it('can be instantiated', () => {
@@ -24,7 +22,6 @@ describe('airport', () => {
     it('can add planes', () => {
         airport.addPlane(ba149);
         expect(airport.aeroplanes).toContain(ba149);
-        expect(ba149.currentAirport).toBe(airport);
     });
     it('can remove planes', () => {
         airport.addPlane(ba127);
@@ -32,13 +29,7 @@ describe('airport', () => {
         airport.removePlane(ba149);
 
         expect(airport.aeroplanes).toContain(ba127);
-        expect(ba127.currentAirport).toBe(airport);
-        expect(ba149.currentAirport).toBeFalsy;
+
     });
-
-
-});
-    
-    
-    
+    });    
 });

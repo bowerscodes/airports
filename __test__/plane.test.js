@@ -1,6 +1,4 @@
-const Airport = require('../src/airport.js');
 const Aeroplane = require('../src/plane.js');
-const Flightplan = require('../src/flightplan.js');
 
 describe('Aeroplane', () => {
     describe('with airports and a flightplan', () => {
@@ -30,13 +28,13 @@ describe('Aeroplane', () => {
             expect(aeroplane).toBeInstanceOf(Object);
         });
         it('has a starting port', () => { 
-            expect(aeroplane.currentAirport).toEqual(sitges);
+            expect(sitges.addPlane).toHaveBeenCalledWith(aeroplane);
         });
         it('can take off', () => {    
             aeroplane.takeOff();
     
             expect(aeroplane.currentAirport).toBeFalsy();
-            expect(aeroplane.previousAirport).toEqual(flightplan.airports[0]);
+            expect(sitges.removePlane).toHaveBeenCalledWith(aeroplane);
             expect(aeroplane.previousAirport.planes).toStrictEqual([]);       
         });
         it('can land at a different airport', () => {    
