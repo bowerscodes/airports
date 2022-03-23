@@ -31,7 +31,8 @@ describe('Aeroplane', () => {
         aeroplane.takeOff();
 
         expect(aeroplane.currentAirport).toBeFalsy();
-        expect(aeroplane.previousAirport).toEqual(flightplan.airports[0]);        
+        expect(aeroplane.previousAirport).toEqual(flightplan.airports[0]);
+        expect(aeroplane.previousAirport.planes).toBeFalsy();       
     });
     it('can land at a different airport', () => {
         const sitges = new Airport('Sitges');
