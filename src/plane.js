@@ -3,7 +3,7 @@ class Aeroplane {
         this.flightplan = flightplan
         this.currentAirport = flightplan.airports[0];
         this.previousAirport = null;
-
+        this.currentAirport.addPlane(this);
     };
 
     takeOff() {
@@ -17,6 +17,7 @@ class Aeroplane {
         const previousAirportIndex = flightplan.airports.indexOf(this.previousAirport);
         
         this.currentAirport = flightplan.airports[previousAirportIndex + 1];
+        this.currentAirport.addPlane(this);
     };
 }
 
