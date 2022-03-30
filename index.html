@@ -8,8 +8,29 @@
 
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/normalize.css">
+    
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 <body>
-    <div id="viewport"></div>
+    <!-- Refresh: fade down effect -->
+    <div class="refresh"></div>
+
+    <div id="viewport">
+        <div id="viewport-overlay">
+            <!-- Clingo: CRT bulb-esque flicker effect -->
+            <div class="cligno"></div>
+        </div>
+        <div id="viewport-background"></div>
+        <div id= viewport-content>
+            <p>Live: Tower 1</p>
+            <p>LHR Ground</p>
+        </div>
+    </div>
+
+    <script src="src/controller.js"></script>
+    <script>
+        const constroller = new Controller();
+    </script>
 </body>
 </html>
