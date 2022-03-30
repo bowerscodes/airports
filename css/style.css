@@ -1,0 +1,27 @@
+html {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    height: 100%;
+    background-color: black;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../images/atc2.jpeg);
+    background-size: cover;
+    background-position: center center;
+}
+
+#viewport {
+    width: 640px;
+    height: 256px;
+    position: relative;
+    overflow-x: auto;
+    /* background-image: url(../images/atc1.jpeg); */
+    background-size: cover;
+    background-position: center center;
+    background: linear-gradient(rgb(0, 0, 0, 1), rgba(0, 0, 0, 0.4));
+    box-shadow: black 6px 6px;
+    border: greenyellow solid 1px;
+}
