@@ -44,6 +44,7 @@ body {
     position: absolute;
     width: 100%;
     height: 100%;
+    right: 1em;
     color:yellowgreen;
     font-family:'Courier New',Courier, monospace;
     line-height:0.2rem;
