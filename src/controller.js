@@ -1,10 +1,38 @@
-class Controller {
-    
-    constructor(aeroplane) {
-        this.aeroplane = aeroplane;
+(function exportController() {
 
+    class Controller {
+    
+        constructor(aeroplane) {
+            this.aeroplane = aeroplane;
+    
+
+            this.renderAirports();
+        }
+    
+        renderAirports (airports) {
+            const airportsElement = document.querySelector('#airports');
+            airportsElement.style.width = '0px';
+
+            airports.forEach((airport, index) => {
+                const newAirportElement = document.createElement('div');
+                newAirportElement.className = 'airport';
+                newAirportElement.dataset.airportName = airport.name;
+                newAirportElement.dataset.airportIndex = index;
+
+                airportsElement.appendChild(newAirportElement);
+
+                const airportsElementWidth = parseInt(airportsElement.style.width, 10);
+                airportsElement.style.width = `${airportsElementWidth + 256}px`;
+            })
+        };
+    
     }
 
-
-
+if (typeof module !=='undefined' && module.exports) {
+    module.exports = Controller;
+} else {
+    window.Controller = Controller;
 }
+
+}());
+
