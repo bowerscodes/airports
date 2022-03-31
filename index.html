@@ -47,13 +47,13 @@
     <script src="src/airport.js"></script>
     <script src="src/flightplan.js"></script>
     <script>
-        const controller = new Controller();
         const flightplan = new Flightplan([
         new Airport('San Francisco'),
         new Airport('Las Vegas'),
         new Airport('Florida'),
         new Airport('New York')
         ]);
+        const controller = new Controller();
         controller.renderAirports(flightplan.airports);
 
     </script>

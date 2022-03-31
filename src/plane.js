@@ -9,10 +9,16 @@
         };
     
         takeOff() {
-
+            const flightplan = this.flightplan;
+            const currentAirportIndex = flightplan.airports.indexOf(this.currentPort);
+            
+            if(currentAirportIndex === (flightplan.ports.length -1)) {
+                throw new Error('End of flightplan reached');
+            }
+            
             this.previousAirport = this.currentAirport;
+            this.currentAirport.removePlane(this);
             this.currentAirport = null;
-            this.previousAirport.removePlane(this);
             
         };
     

@@ -129,7 +129,7 @@ hr {
     position: absolute;
     width: 100%;
     height: 100%;
-    color:rgb(214,224,212);
+    color:rgb(120, 224, 164);
     font-family:'Courier New',Courier, monospace;
     line-height:0.2rem;
     text-align:right;
@@ -142,14 +142,21 @@ hr {
 }
 
 #airports > .airport {
-    width: 64px;
-    height: 64px;
-    background-image: url('../images/airport.png');
-    background-color: rgb(214,224,212);
-    background-size: cover;
+    width: 32px;
+    height: 18px;
+    /* background-image: url('../images/airport.png'); */
+    background-color: rgb(120, 224, 164);
+    /* background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat; */
 }
 
-
+.airportImg {
+    height: 100%;
+    mix-blend-mode: screen;
+    background-color: rgb(120, 224, 164);
+    box-shadow: rgb(120, 224, 164) 2px 2px, rgb(120, 224, 164) 2px 0px, rgb(120, 224, 164) 2px -2px, rgb(120, 224, 164) 0px -2px, rgb(120, 224, 164) -2px -2px, rgb(120, 224, 164) -2px 0px, rgb(120, 224, 164) -2px 2px, rgb(120, 224, 164) -2px 0px;
+}
 
 @keyframes refresh{0%{bottom:100%}70%{bottom:100%}100%{bottom:0px}}
 .refresh {

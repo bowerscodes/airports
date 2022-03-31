@@ -4,9 +4,8 @@
     
         constructor(aeroplane) {
             this.aeroplane = aeroplane;
-    
 
-            this.renderAirports();
+            // this.renderAirports();
         }
     
         renderAirports (airports) {
@@ -15,14 +14,22 @@
 
             airports.forEach((airport, index) => {
                 const newAirportElement = document.createElement('div');
+                const newAirportImg = document.createElement('img');
+
                 newAirportElement.className = 'airport';
                 newAirportElement.dataset.airportName = airport.name;
                 newAirportElement.dataset.airportIndex = index;
 
+                newAirportImg.className = 'airport, airportImg';
+                newAirportImg.dataset.airportName = airport.name;
+                newAirportImg.dataset.airportIndex = index;
+                newAirportImg.src = "images/runway.jpeg";
+
                 airportsElement.appendChild(newAirportElement);
+                newAirportElement.appendChild(newAirportImg);
 
                 const airportsElementWidth = parseInt(airportsElement.style.width, 10);
-                airportsElement.style.width = `${airportsElementWidth + 256}px`;
+                airportsElement.style.width = `${airportsElementWidth + 386}px`;
             })
         };
     
