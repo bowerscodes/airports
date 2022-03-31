@@ -32,6 +32,16 @@
                 airportsElement.style.width = `${airportsElementWidth + 386}px`;
             })
         };
+
+        renderPlane (aeroplane) {
+            // const aeroplane = this.aeroplane;
+
+            const planeAirportIndex = aeroplane.flightplan.airports.indexOf(aeroplane.currentAirport);
+            const airportElement = document.querySelector(`[data-airport-index='${planeAirportIndex}']`);
+            const planeElement = document.querySelector('#plane');
+            planeElement.style.top = `${-airportElement.offsetTop}px`;
+            planeElement.style.top = `${airportElement.offsetLeft + 32}px`;
+        }
     
     }
 

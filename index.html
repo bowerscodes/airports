@@ -39,6 +39,7 @@
         <div id="viewport-background"></div>
         <div id="airports">
         </div>
+        <div id="plane"></div>
         <!-- <div id= viewport-content>
         </div> -->
     </div>
@@ -46,6 +47,7 @@
     <script src="src/controller.js"></script>
     <script src="src/airport.js"></script>
     <script src="src/flightplan.js"></script>
+    <script src="src/plane.js"></script>
     <script>
         const flightplan = new Flightplan([
         new Airport('San Francisco'),
@@ -53,8 +55,10 @@
         new Airport('Florida'),
         new Airport('New York')
         ]);
+        const aeroplane = new Aeroplane(flightplan);
         const controller = new Controller();
         controller.renderAirports(flightplan.airports);
+        controller.renderPlane(aeroplane);
 
     </script>
 </body>

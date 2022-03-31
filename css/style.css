@@ -8,7 +8,7 @@ body {
     background-color: black;
     justify-content: center;
     align-items: center;
-    background-image: url(../images/atc7.jpeg);
+    background-image: url('../images/atc7.jpeg');
     background-size: cover;
     background-position: center center;
 }
@@ -120,12 +120,12 @@ hr {
     width: 100%;
     height: 100%;
     position: absolute;
-    background-image: url(../images/atc8.jpeg);
+    background-image: url('../images/atc8.jpeg');
     background-size: cover;
     opacity: 0.6;
 }
 
-#viewport-content {
+/* #viewport-content {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -133,7 +133,7 @@ hr {
     font-family:'Courier New',Courier, monospace;
     line-height:0.2rem;
     text-align:right;
-}
+} */
 
 #airports {
     margin-top:96px;
@@ -157,6 +157,15 @@ hr {
     background-color: rgb(120, 224, 164);
     box-shadow: rgb(120, 224, 164) 2px 2px, rgb(120, 224, 164) 2px 0px, rgb(120, 224, 164) 2px -2px, rgb(120, 224, 164) 0px -2px, rgb(120, 224, 164) -2px -2px, rgb(120, 224, 164) -2px 0px, rgb(120, 224, 164) -2px 2px, rgb(120, 224, 164) -2px 0px;
 }
+
+#plane {
+    width: 64px;
+    height: 64px;
+    background-image: url('../images/plane1.jpg');
+    background-size: contain;
+    position: absolute;
+}
+
 
 @keyframes refresh{0%{bottom:100%}70%{bottom:100%}100%{bottom:0px}}
 .refresh {
