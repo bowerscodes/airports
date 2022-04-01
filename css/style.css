@@ -1,11 +1,12 @@
 html, body {
-    height: 100%;
+    /* height: 100%; */
     width: 100vw;
 }
 
 body {
     display: flex;
-    flex-flow: column wrap;
+    /* flex-flow: column wrap; */
+    flex-direction: column;
     background-color: black;
     justify-content: center;
     align-items: center;
@@ -25,18 +26,19 @@ body {
 }
 
 #header {
-    position: flex;
-    flex-direction: row;
+    display: flex;
+    flex-direction: column;
     text-align: center;
-    width: 640px;
-    margin: 0 auto;
+    width: 80%;
+    margin: 0 auto 1rem;
+    top: 0px;
 }
 
 #title {
     margin-top: 6vh;
     color: rgb(120, 224, 164);
     font-family: 'Rubik Mono One', sans-serif;
-    font-size: 2.5em;
+    font-size: 8vw;
     text-align: center;
     text-shadow: rgba(0,0,0,0.8) 4px 4px;
     text-shadow: rgb(120, 224, 164) 0px  0px 20px;
@@ -46,7 +48,7 @@ body {
     color: rgb(12, 159, 191);
     font-family: 'Rubik Mono One', sans-serif;
     font-style: italic;
-    font-size: 1.5em;
+    font-size: 4vw;
     text-align: center;
     text-shadow: rgba(0,0,0,0.7) 4px 4px;
     text-shadow: rgb(12, 159, 191) 0px  0px 15px;
@@ -55,7 +57,7 @@ body {
 }
 
 hr {
-    border-top: 6px dashed rgb(199, 62, 72);
+    border-top: 6px solid rgb(199, 62, 72);
     border-bottom: none;
     border-left: none;
     border-right: none;
@@ -106,16 +108,24 @@ hr {
     left: 0;
     width: 0;
     height: 100%;
-    background: rgba(202, 138, 53, 0.8);
-    transition: all .35s;
+    background: rgba(202, 138, 53, 0.6);
+    transition: all .35s ease-in-out;
+ 
   }
   
   #depart-button:hover{
-    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.5);
   }
   
   #depart-button:hover:after{
     width: 100%;
+  }
+
+  #depart-button:active{
+    transform: translateX(2px) translateY(2px);
+    background: rgba(120, 224, 164, 0.9);
+
+    
   }
 
 
@@ -130,6 +140,7 @@ hr {
 
 #viewport {
     width: 640px;
+    max-width: 95%;
     height: 256px;
     position: relative;
     overflow-x: auto;
@@ -200,7 +211,8 @@ hr {
 #plane::after {
     /* radar ring effect */
     content: '';
-    width: 32px; height: 32px;
+    width: 32px;
+    height: 32px;
     border-radius: 100%;
     border: 4px solid rgb(120, 224, 164);
     position: absolute;
@@ -212,12 +224,22 @@ hr {
   }
 
 #message {
-    padding: 16px;
+    margin: 8px;
+    padding: 4px;
     font-family: 'VT323', monospace;
+    font-size: 1.5rem;
     position: absolute;
-    width: 100%;
-    border: 4px 0px solid rgb(12, 159, 191);
-    background-color: gradie
+    width: auto;
+    max-width: 98%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-top: 4px solid rgb(199, 62, 72);
+    border-bottom: 4px solid rgb(199, 62, 72);
+    color: rgb(214, 224, 212);
+    text-shadow: rgb(214, 224, 212) 0px 0px 7px;
+    /* background: linear-gradient(90deg, rgba(12, 159, 191, 0), rgba(214, 224, 212, 0.8), rgba(12, 159, 191, 0)); */
+    z-index: 1;
 }
 
 
