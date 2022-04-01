@@ -56,13 +56,12 @@
             const nextAirportElement = document.querySelector(`[data-airport-index='${nextAirportIndex}']`);
 
             if (!nextAirportElement) {
-                return alert('End of the Line!');
-            }
+                this.renderMessage('End of the Line!');
+            } else {
+                this.renderMessage(`Now departing ${aeroplane.currentAirport.name}`);
 
-            this.renderMessage(`Now departing ${aeroplane.currentAirport.name}`);
-
-            const planeElement = document.querySelector('#plane');
-            const flyInterval = setInterval(() => {
+                const planeElement = document.querySelector('#plane');
+                const flyInterval = setInterval(() => {
                 const planeLeft = parseInt(planeElement.style.left, 10);
                 if (planeLeft === (nextAirportElement.offsetLeft + 48)) {
                     aeroplane.takeOff();
@@ -72,6 +71,7 @@
                 
                 planeElement.style.left = `${planeLeft +1}px`
             }, 20);
+            };
             
         }
 
@@ -80,8 +80,8 @@
 
             const nextAirportIndex = aeroplane.flightplan.airports.indexOf(aeroplane.previousAirport + 1);
 
-
             this.renderMessage(`Now arriving at ${aeroplane.flightplan.airports[nextAirportIndex].airport}`);
+            
         }
 
         renderMessage(message) {
