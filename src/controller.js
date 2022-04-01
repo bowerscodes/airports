@@ -10,7 +10,7 @@
             document.querySelector('#depart-button').addEventListener('click', () => {
                 this.takeOff();
             });
-        }
+        };
     
         renderAirports (airports) {
             const airportsElement = document.querySelector('#airports');
@@ -37,8 +37,8 @@
             })
         };
 
-        renderPlane (aeroplane) {
-            // const aeroplane = this.aeroplane;
+        renderPlane () {
+            const aeroplane = this.aeroplane;
 
             const planeAirportIndex = aeroplane.flightplan.airports.indexOf(aeroplane.currentAirport);
             const airportElement = document.querySelector(`[data-airport-index='${planeAirportIndex}']`);

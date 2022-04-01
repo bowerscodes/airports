@@ -55,7 +55,7 @@
         new Airport('New York')
         ]);
         const aeroplane = new Aeroplane(flightplan);
-        const controller = new Controller();
+        const controller = new Controller(aeroplane);
         
         controller.renderAirports(flightplan.airports);
         controller.renderPlane(aeroplane);
