@@ -141,12 +141,13 @@ hr {
     border: rgb(214,224,212) solid 2px;
 }
 
-/* #viewport-overlay {
+#viewport-overlay {
     width: 640px;
     height: 256px;
     position: fixed;
+    z-index: 0;
     background: repeating-linear-gradient(to bottom,rgba(54, 38, 0, 0.4), rgba(54, 38, 0, 0.3) 4px, rgba(45, 100, 10, 0.2) 4px, rgba(54, 38, 0, 0.1) 8px);
-} */
+}
 
 #viewport-background {
     width: 100%;
