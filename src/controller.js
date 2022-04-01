@@ -39,8 +39,11 @@
             const planeAirportIndex = aeroplane.flightplan.airports.indexOf(aeroplane.currentAirport);
             const airportElement = document.querySelector(`[data-airport-index='${planeAirportIndex}']`);
             const planeElement = document.querySelector('#plane');
-            planeElement.style.top = `${-airportElement.offsetTop}px`;
-            planeElement.style.top = `${airportElement.offsetLeft + 32}px`;
+
+            console.log(airportElement.offsetTop);
+            console.log(airportElement.offsetLeft);
+            planeElement.style.top = `${airportElement.offsetTop + 32}px`;
+            planeElement.style.left = `${airportElement.offsetLeft + 48}px`;
         }
     
     }
