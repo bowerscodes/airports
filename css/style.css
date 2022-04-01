@@ -19,7 +19,7 @@ body {
     width: 100vw;
     height: 100%;
     color: rgb(214,224,212);
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'VT323', monospace;
     font-weight: bold;
     text-align: right;
 }
@@ -65,7 +65,9 @@ hr {
 }
 
 #depart-button {
-    width: 30%;
+    display: block;
+    position: relative;
+    width: 240px;
     margin: 20px auto;
     text-align: center;
     color: rgba(238, 202, 262, 0.9);
@@ -79,9 +81,10 @@ hr {
     border: 3px solid rgba(202, 138, 53, 0.8);
     box-shadow: rgba(0,0,0,0.7) 4px 4px;
     box-shadow: rgb(202, 138, 53) 0px 0px 20px;
+    transition: all .35s;
 }
 
-#depart-button:focus {
+/* #depart-button:focus {
     background-color: rgba(202, 138, 53, 0.7);
     color: rgba(238, 202, 62, 0.9);
     text-shadow: rgb(238, 202, 62) 0px 0px 20px;
@@ -89,7 +92,33 @@ hr {
     border: 3px solid rgba(202, 138, 53, 0.8);
     box-shadow: rgba(0,0,0,0.7) 4px 4px;
     box-shadow: rgb(202, 138, 53) 0px 0px 20px;
-}
+} */
+
+#depart-button span{
+    position: relative;
+    z-index: 2;
+  }
+
+#depart-button:after{
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: rgba(202, 138, 53, 0.8);
+    transition: all .35s;
+  }
+  
+  #depart-button:hover{
+    background-color: #fff;
+  }
+  
+  #depart-button:hover:after{
+    width: 100%;
+  }
+
+
 
 .current-airport {
 
@@ -165,10 +194,39 @@ hr {
     animation-name: plane;
 }
 
+#plane::after {
+    /* radar ring effect */
+    content: '';
+    width: 32px; height: 32px;
+    border-radius: 100%;
+    border: 4px solid rgb(120, 224, 164);
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: ring 1s infinite;
+  }
+
 @keyframes plane {
     0% {opacity:1}
-    90% {opacity:0}
+    30%{opacity:1}
+    95% {opacity:0}
     100% {opacity:1}
+}
+
+@keyframes ring {
+    0% {
+        width: 32px;
+        height: 32px;
+        opacity: 1;
+    }
+    /* 5% {opacity: 1} */
+    100% {
+        width: 128px;
+        height: 128px;
+        opacity: 0;
+    }
 }
 
 @keyframes refresh{0%{bottom:100%}70%{bottom:100%}100%{bottom:0px}}

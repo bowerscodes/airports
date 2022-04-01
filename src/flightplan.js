@@ -1,4 +1,3 @@
-
 (function exportFlightplan() {
 
     class Flightplan {

@@ -6,6 +6,10 @@
             this.aeroplane = aeroplane;
 
             // this.renderAirports();
+
+            document.querySelector('#depart-button').addEventListener('click', () => {
+                this.takeOff();
+            });
         }
     
         renderAirports (airports) {
@@ -38,12 +42,36 @@
 
             const planeAirportIndex = aeroplane.flightplan.airports.indexOf(aeroplane.currentAirport);
             const airportElement = document.querySelector(`[data-airport-index='${planeAirportIndex}']`);
+            
             const planeElement = document.querySelector('#plane');
-
-            console.log(airportElement.offsetTop);
-            console.log(airportElement.offsetLeft);
             planeElement.style.top = `${airportElement.offsetTop + 32}px`;
             planeElement.style.left = `${airportElement.offsetLeft + 48}px`;
+        };
+
+        takeOff() {
+            const aeroplane = this.aeroplane;
+ 
+            
+            const currentAirportIndex = aeroplane.flightplan.airports.indexOf(aeroplane.currentAirport);
+            const nextAirportIndex = currentAirportIndex + 1;
+            const nextAirportElement = document.querySelector(`[data-airport-index='${nextAirportIndex}']`);
+
+            if (!nextAirportElement) {
+                return alert('End of the Line!');
+            }
+
+            const planeElement = document.querySelector('#plane');
+            const flyInterval = setInterval(() => {
+                const planeLeft = parseInt(planeElement.style.left, 10);
+                if (planeLeft === (nextAirportElement.offsetLeft + 48)) {
+                    aeroplane.takeOff();
+                    aeroplane.land();
+                    clearInterval(flyInterval);
+                }
+                
+                planeElement.style.left = `${planeLeft +1}px`
+            }, 20);
+            
         }
     
     }
