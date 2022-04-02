@@ -50,8 +50,9 @@ body {
     font-style: italic;
     font-size: 4vw;
     text-align: center;
-    text-shadow: rgba(0,0,0,0.7) 4px 4px;
+    text-shadow: rgba(0,0,0,0.8) 4px 4px;
     text-shadow: rgb(12, 159, 191) 0px  0px 15px;
+    text-shadow: rgb(214,224,212) 0px 1px 1px, rgb(214,224,212) 1px 1px 1px, rgb(214,224,212) 1px 0px 1px, rgb(214,224,212) 1px -1px 1px, rgb(214,224,212) 0px -1px 1px, rgb(214,224,212) -1px -1px 1px, rgb(214,224,212) -1px 0px 1px, rgb(214,224,212) -1px 1px 1px;
 
 
 }

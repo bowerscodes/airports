@@ -81,7 +81,6 @@
             const nextAirportIndex = aeroplane.flightplan.airports.indexOf(aeroplane.previousAirport + 1);
 
             this.renderMessage(`Now arriving at ${aeroplane.flightplan.airports[nextAirportIndex].airport}`);
-            
         }
 
         renderMessage(message) {
