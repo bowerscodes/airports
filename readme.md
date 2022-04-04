@@ -31,6 +31,20 @@ Whereas the **Aeroplane**, **Airport** and **Flightplan** classes construct the 
 
 
 ### Front-End
+The front-end of this project consists of a HTML page and a corresponding CSS stylesheet, which are both managed by the `controller` JavaScript module. Using `querySelector`s, the controller looks up HTML Elements by attribute *(i.e. class, id)*, and assigns them to `Element` objects, which can then have Methods and functions performed upon them:
+``` JavaScript
+document.querySelector('#depart-button').addEventListener('click', () => {
+    this.takeOff();
+});
+```
+
+We can also make things happen conditionally - for example, when we reach the end of our `flightplan`:
+```JavaScript
+if (!nextAirportElement) {
+        this.renderMessage('End of the Line!');
+    } else {
+        this.renderMessage(`Now departing ${aeroplane.currentAirport.name}`);
+```
 
 
 ## Examples of Use
