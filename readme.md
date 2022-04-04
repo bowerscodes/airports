@@ -15,6 +15,17 @@ This web application was initially made for the purpose of demonstrating the fun
 
 ## Scope of Functionalities
 ### JavaScript Classes
+At the top level, the project consists of three main JavaScript modules, as well as a controller which uses the output of the program to manipulate the DOM. These modules, along with their purpose, are as follows:
+
+#### Aeroplane:
+The Aeroplane class constructs an `aeroplane` object which uses the passed-in `flightplan` object to track the aeroplane's `currentAirport`, and defines two key functions: `takeOff` and `land`. These functions use the index of the `currentAirport` within the `flightplan` array, in order to navigate to the next airport in the flightplan. The `takeOff` or `land` functions also ensure that the `aeroplane` is removed / added from the `currentAirport`'s own array of `aeroplanes`.
+
+#### Airport:
+
+
+#### Flightplan: 
+
+#### Controller:
 
 
 ### Objects
