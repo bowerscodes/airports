@@ -6,6 +6,7 @@
             this.aeroplane = aeroplane;
 
             // this.renderAirports();
+            // this.renderHUD();
 
             document.querySelector('#depart-button').addEventListener('click', () => {
                 this.takeOff();
@@ -44,9 +45,34 @@
             const airportElement = document.querySelector(`[data-airport-index='${planeAirportIndex}']`);
             
             const planeElement = document.querySelector('#plane');
-            planeElement.style.top = `${airportElement.offsetTop + 32}px`;
+            planeElement.style.top = `${airportElement.offsetTop + 128}px`;
             planeElement.style.left = `${airportElement.offsetLeft + 48}px`;
         };
+
+        renderHUD() {
+            const aeroplane = this.aeroplane;
+            const viewportHUD = document.getElementById('viewport-HUD');
+
+            if (!document.querySelector('#current-airport')) {
+
+                const currentAirport = document.createElement('div');
+                currentAirport.id = 'current-airport';
+                currentAirport.innerHTML = `Current Airport: ${aeroplane.currentAirport.name}`;
+                viewportHUD.appendChild(currentAirport);
+
+                const nextAirport = document.createElement('div');
+                nextAirport.id = 'next-airport';
+                nextAirport.innerHTML = `Next Airport: ${aeroplane.flightplan.airports[indexOf(aeroplane.currentAirport + 1)].name}`;
+                viewportHUD.appendChild(currentAirport);
+
+            } else {
+                currentAirport.innerHTML = `Current Airport: ${aeroplane.currentAirport.name}`;
+                nextAirport.innerHTML = `Next Airport: ${aeroplane.flightplan.airports[indexOf(aeroplane.currentAirport + 1)].name}`;
+            }
+            
+
+        }
+
 
         takeOff() {
             const aeroplane = this.aeroplane;

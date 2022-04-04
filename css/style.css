@@ -38,7 +38,7 @@ body {
     margin-top: 6vh;
     color: rgb(120, 224, 164);
     font-family: 'Rubik Mono One', sans-serif;
-    font-size: 8vw;
+    font-size: 6vw;
     text-align: center;
     text-shadow: rgba(0,0,0,0.8) 4px 4px;
     text-shadow: rgb(120, 224, 164) 0px  0px 20px;
@@ -48,13 +48,11 @@ body {
     color: rgb(12, 159, 191);
     font-family: 'Rubik Mono One', sans-serif;
     font-style: italic;
-    font-size: 4vw;
+    font-size: 3.5vw;
     text-align: center;
     text-shadow: rgba(0,0,0,0.8) 4px 4px;
     text-shadow: rgb(12, 159, 191) 0px  0px 15px;
     text-shadow: rgb(214,224,212) 0px 1px 1px, rgb(214,224,212) 1px 1px 1px, rgb(214,224,212) 1px 0px 1px, rgb(214,224,212) 1px -1px 1px, rgb(214,224,212) 0px -1px 1px, rgb(214,224,212) -1px -1px 1px, rgb(214,224,212) -1px 0px 1px, rgb(214,224,212) -1px 1px 1px;
-
-
 }
 
 hr {
@@ -130,14 +128,25 @@ hr {
   }
 
 
+#viewport-HUD {
+    width: 100%;
+    /* height: 100%; */
+    position: absolute;
+    text-align: right;
+    font-family: 'VT323', monospace;
+    font-weight: bold;
+    color: rgba(214, 224, 212, 0.9)
+    
+}
 
-.current-airport {
-
+/* .current-airport {
+    width: 100%;
+    text-align: right;
 }
 
 .next-airport {
     
-}
+} */
 
 #viewport {
     width: 640px;
@@ -149,6 +158,7 @@ hr {
     background-size: cover;
     background-repeat: repeat-x;
     background-position: center center;
+    opacity: 90%;
     box-shadow: black 6px 6px;
     border: rgb(214,224,212) solid 2px;
 }
@@ -182,6 +192,7 @@ hr {
 
 #airports {
     margin-top:96px;
+    position: relative;
     display: flex;
     justify-content: space-around;
 }
