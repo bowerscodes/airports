@@ -2,6 +2,15 @@
 ### Introduction
 This web application was initially made for the purpose of demonstrating the functionality of JavaScript Classes, Objects and modular code, with accompanying unit test suites. The GUI aspect demonstrates how Classes and Objects can be translated into the front-end browser experience, by tying together the three fundamental languages of the Web.
 
+## Contents
+* [Lanuages & Technologies](##Lanuages-&-Technologies)
+* [Scope of Functionalities](##Scope-of-Functionalities)
+* [JavaScript Classes](###JavaScript-classes)
+* [Front-End](###front-end)
+* [Examples of Use](##Examples-of-Use)
+* [Project Status](##Project-status)
+* [Sources & Credits](##Sources-&-credits)
+
 ## Languages & Technologies
 ### Languages
 * JavaScript
@@ -27,11 +36,11 @@ The Airport class uses a passed-in string, `name`, to construct an `airport` obj
 The Flightplan class has just attribute - `airports` - which stores the passed-in **array** of `airports`. For the program to work, it is crucial that the passed in `airports`, even if singular, are passed in as an `[array]`. This is so that the `aeroplane` object itself can navigate, using the indexes of the array.
 
 #### Controller:
-Whereas the **Aeroplane**, **Airport** and **Flightplan** classes construct the three fundamental objects required for the application to work, the Controller class uses a passed-in `aeroplane` object to construct a `controller` object, which acts as an interface between those three modules to render the application in the browser. It does this by using Element objects in conjunction with `querySelector()` and `createElement()` JavaScript Methods - as well as the Node.js methods, `appendChild()` and `removeChild() ` - to manipulate the DOM structure in real-time.
+Whereas the **Aeroplane**, **Airport** and **Flightplan** classes construct the three fundamental objects required for the application to work, the Controller class uses a passed-in `aeroplane` object to construct a `controller` object, which acts as an interface between those three modules to render the application in the browser. It does this by using Element objects in conjunction with `querySelector()` and `createElement()` JavaScript Methods - as well as the Node.js methods, `appendChild()` and `removeChild()` - to manipulate the DOM structure in real-time.
 
 
 ### Front-End
-The front-end of this project consists of a HTML page and a corresponding CSS stylesheet, which are both managed by the `controller` JavaScript module. Using `querySelector`s, the controller looks up HTML Elements by attribute *(i.e. class, id)*, and assigns them to `Element` objects, which can then have Methods and functions performed upon them:
+The front-end of this project consists of a HTML page and a corresponding CSS stylesheet, which are both managed by the `controller` JavaScript module. Using the `querySelector` method, the controller looks up HTML Elements by attribute *(i.e. class, id)*, and assigns them to `Element` objects, which can then have methods and functions performed upon them:
 ``` JavaScript
 document.querySelector('#depart-button').addEventListener('click', () => {
     this.takeOff();
