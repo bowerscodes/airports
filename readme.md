@@ -3,13 +3,13 @@
 This web application was initially made for the purpose of demonstrating the functionality of JavaScript Classes, Objects and modular code, with accompanying unit test suites. The GUI aspect demonstrates how Classes and Objects can be translated into the front-end browser experience, by tying together the three fundamental languages of the Web.
 
 ## Contents
-* [Lanuages & Technologies](#Lanuages-&amp-Technologies)
+* [Lanuages & Technologies](#Lanuages--Technologies)
 * [Scope of Functionalities](#Scope-of-Functionalities)
 * [JavaScript Classes](#JavaScript-classes)
 * [Front-End](#front-end)
 * [Examples of Use](#Examples-of-Use)
 * [Project Status](#Project-status)
-* [Sources & Credits](#Sources-&amp;-credits)
+* [Sources & Credits](#Sources--credits)
 
 ## Languages & Technologies
 ### Languages
