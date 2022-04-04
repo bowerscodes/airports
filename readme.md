@@ -24,11 +24,10 @@ The Aeroplane class uses a passed-in `flightplan` object to construct an `aeropl
 The Airport class uses a passed-in string, `name`, to construct an `airport` object with two attributes: a `name`, and an an empty array of `aeroplanes`. Airports also have two functions, `addPlane(aeroplane)` and `removePlane(aeroplane)`, which respectively add and remove `aeroplane` objects to the `airport`'s `aeroplanes` array, each time one arrives or departs.
 
 #### Flightplan: 
+The Flightplan class has just attribute - `airports` - which stores the passed-in **array** of `airports`. For the program to work, it is crucial that the passed in `airports`, even if singular, are passed in as an `[array]`. This is so that the `aeroplane` object itself can navigate, using the indexes of the array.
 
 #### Controller:
-
-
-### Objects
+Whereas the **Aeroplane**, **Airport** and **Flightplan** classes construct the three fundamental objects required for the application to work, the Controller class uses a passed-in `aeroplane` object to construct a `controller` object, which acts as an interface between those three modules to render the application in the browser. It does this by using Element objects in conjunction with `querySelector()` and `createElement()` JavaScript Methods - as well as the Node.js methods, `appendChild()` and `removeChild() ` - to manipulate the DOM structure in real-time.
 
 
 ### Front-End
