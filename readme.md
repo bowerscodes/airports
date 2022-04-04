@@ -11,7 +11,7 @@ This web application was initially made for the purpose of demonstrating the fun
 * [Project Status](#Project-status)
 * [Sources & Credits](#Sources-&amp-credits)
 
-## Languages & Technologies
+## Languages &amp Technologies
 ### Languages
 * JavaScript
 * HTML
@@ -75,5 +75,5 @@ In this project, the Aeroplane **Class** constructs an aeroplane **Obect** from 
 ## Project Status
 This project is currently Active 👨🏼‍💻
 
-## Sources & Credits
+## Sources &amp Credits
 This project is an adapted remake of a ship tracking project made whilst studying with Manchester Codes.
